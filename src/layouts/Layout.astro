@@ -1,0 +1,27 @@
+---
+import SEOHead from '../components/seo/SEOHead.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR" class="dark scroll-smooth">
+	<head>
+		<SEOHead title={title} description={description} />
+	</head>
+	<body class="flex flex-col min-h-screen bg-slate-900 text-slate-100">
+		<Header />
+		<main class="flex-grow container mx-auto px-4 py-8">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
