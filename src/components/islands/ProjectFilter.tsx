@@ -81,7 +81,7 @@ export default function ProjectFilter({ projects }: ProjectFilterProps) {
                     filteredProjects.map((project) => (
                         <a
                             key={project.slug}
-                            href={`${import.meta.env.BASE_URL}projetos/${project.slug}`}
+                            href={`${import.meta.env.BASE_URL}/projetos/${project.slug}`}
                             className="block bg-slate-800/50 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 transition-all group"
                         >
                             <div className="h-48 bg-slate-800 relative overflow-hidden">
